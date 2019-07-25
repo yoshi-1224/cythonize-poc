@@ -5,7 +5,7 @@ from Cython.Distutils import build_ext
 setup(
     name = "cythonize_before_pyinstaller",
     build_dir = "build",
-    ext_modules = cythonize('pac1/hello.py'),
+    ext_modules = cythonize(['pac1/hello.py', 'pac2/hola.py']),
 )
 
 # python setup.py build_ext --inplace
