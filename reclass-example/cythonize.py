@@ -25,10 +25,10 @@ def find_all_pyx_files(dir, files=[]):
 
 # generate an Extension object from its dotted name
 def make_extension_objs(ext_name):
-    ext_name = ext_name.replace(".", os.path.sep) + ".pyx"
+    ext_path = ext_name.replace(".", os.path.sep) + ".pyx"
     # this for example converts package stored at pac1/utils to
     # Extension('pac1.utils', 'pac1/utils')
-    return Extension(ext_name, [ext_name],
+    return Extension(ext_name, [ext_path],
                      extra_link_args=['-Wl,--strip-all']
                      )
 
