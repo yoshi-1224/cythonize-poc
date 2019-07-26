@@ -14,5 +14,3 @@ Due to compile error raised by unresolved variable in `reclass/core.py`, I remov
  ```bash
  ./compare_output.sh
  ```
- 
-If no output is shown, then we are good to go.
