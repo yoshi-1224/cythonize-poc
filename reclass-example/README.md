@@ -6,9 +6,11 @@ It works mostly in the same way as simple-example. Simply run:
 ./cythonize.sh
 ```
 
-Read through the comments in `cythonize.py` and `cythonize.sh` for the differences. 
+This will create a folder named "build" whose structure is exactly the same as "reclass" folder, except all the python files are compiled into `.so` files. We can then use this as a package, exactly in the same way as "reclass" package (except you need to import as "build" rather than "reclass" due to the name of the folder). For example, have a look at `use-cython-reclass.py`.
 
-Reclass (https://github.com/salt-formulas/reclass.git) was only chosen as it was relevant to my project.
+Read through the comments in `cythonize.py` and `cythonize.sh` how the cythonizing is done.
+
+Reclass (https://github.com/salt-formulas/reclass.git) was chosen only because it was relevant to a project I am working on. We should be able to apply the same principle to any project.
 
 ## Changes made to reclass source
 
