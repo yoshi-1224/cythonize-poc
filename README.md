@@ -6,7 +6,13 @@ This project demonstrates how to Cythonize pure python projects for faster runti
 
 ## Motivation
 
-If you want to create a standalone executable using PyInstaller and likes, then it makes sense to cythonize your codebase and compile them into `.so` files.
+If you want to create a standalone executable using PyInstaller and likes, then it makes sense to cythonize some of your codebase and compile them into `.so` files for faster speed.
 
-This is not a real Python project: it tries to just mirror a typical package file structure (with import statements, multiple dependencies i.e. importing a file that imports another file) so that when we apply this to the actual project, we get the idea of how Cython-compiled code behaves.
+## Drawbacks
 
+Cythonizing the scripts will most likely make the file size larger (no pain, no gain). It is therefore recommended to only cythonize a selective portion of the code where performance gains are meaningful.
+
+
+## References
+- https://github.com/cython/cython/wiki/PackageHierarchy
+- https://bucharjan.cz/blog/using-cython-to-protect-a-python-codebase.html
